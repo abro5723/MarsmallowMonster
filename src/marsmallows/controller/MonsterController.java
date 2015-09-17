@@ -30,8 +30,8 @@ public class MonsterController
 	{
 		ashMonster.toString();
 		myOutput.displayMonsterInfo(ashMonster.toString());
-		askQuestions();
-		myOutput.displayMonsterInfo("New Monster Info" + ashMonster.toString());
+		makeUserMonster();
+		myOutput.displayMonsterInfo("New Monster Info" + userMonster.toString());
 	}
 	
 	private void askQuestions()
@@ -70,7 +70,29 @@ public class MonsterController
 		//Step one: Get variables
 		String userName;
 		int userEyes;
-		int userNoseCount
+		int userNoseCount;
+		double userHair;
+		double userLegs;
+		boolean userBellyButton;
+		
+		//Step two:Define variables by using Scanner to get inputs
+		System.out.println("Type in your name for your monster.");
+		userName = monsterScanner.nextLine();
+		System.out.println("Type in the number of eyes for your monster.");
+		userEyes = monsterScanner.nextInt();
+		System.out.println("Type in number of Noses.");
+		userNoseCount = monsterScanner.nextInt();
+		System.out.println("Type in number of hair.");
+		userHair = monsterScanner.nextDouble();
+		System.out.println("Type in new number of legs.");
+		userLegs = monsterScanner.nextDouble();
+		System.out.println("Does it have a bellybutton?(True/False)");
+		userBellyButton = monsterScanner.nextBoolean();
+		
+		//Step three: Make a monster - use the Constructor!
+		userMonster = new MarshmallowMonster(userName, userEyes, userNoseCount, userHair, userLegs, userBellyButton);
+		
+		
 		
 	}
 }
