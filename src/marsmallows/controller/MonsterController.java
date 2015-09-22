@@ -30,8 +30,10 @@ public class MonsterController
 	{
 		ashMonster.toString();
 		myOutput.displayMonsterInfo(ashMonster.toString());
-		makeUserMonster();
-		myOutput.displayMonsterInfo("New Monster Info" + userMonster.toString());
+		myOutput.displayMonsterGUI(ashMonster.toString());
+		myOutput.displayMonsterName(ashMonster.toString());
+		//this.makeUserMonster();
+		//myOutput.displayMonsterInfo("New Monster Info" + userMonster.toString());
 	}
 	
 	private void askQuestions()
