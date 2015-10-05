@@ -9,16 +9,18 @@ public class MarshmallowOutput
 		System.out.println("My monster info is: " + info);
 	}
 	
-	public void displayMonsterGUI(String info)
+	public void showResponse(String wordsFromSomewhere)
 	{
-		JOptionPane.showMessageDialog(null, "My monster information is: " + info);
+		JOptionPane.showMessageDialog(null, wordsFromSomewhere);
+	}
+	
+	public String grabAnswer(String stuff)
+	{
+		String answer = "";
 		
+		answer = JOptionPane.showInputDialog(null, stuff);
+		
+		return answer;
 	}
-	
-	public void displayMonsterName(String getMonsterName)
-	{
-		JOptionPane.showMessageDialog(null, "My monster has: " + getMonsterName + " eyes.");
-	}
-	
 
 }

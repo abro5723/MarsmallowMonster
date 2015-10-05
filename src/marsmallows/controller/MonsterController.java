@@ -28,10 +28,13 @@ public class MonsterController
 
 	public void start()
 	{
-		ashMonster.toString();
-		myOutput.displayMonsterInfo(ashMonster.toString());
-		myOutput.displayMonsterGUI(ashMonster.toString());
-		myOutput.displayMonsterName(ashMonster.toString());
+		String monsterName = myOutput.grabAnswer("Type in your monsters name.");
+		myOutput.showResponse("Your monster's name is: " + monsterName);
+		
+		String temp = myOutput.grabAnswer("Type in your monster's eyes.");
+		int monsterEyes;
+		//ashMonster.toString();
+		//myOutput.displayMonsterInfo(ashMonster.toString());
 		//this.makeUserMonster();
 		//myOutput.displayMonsterInfo("New Monster Info" + userMonster.toString());
 	}
